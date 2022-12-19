@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;;
+}
+
+:root{
+    --color: #30f0fc;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: black;
+}
+
+a{
+    position: relative;
+    padding: 24px 32px;
+    display: block;
+    background: transparent;
+    text-decoration: none;
+    text-decoration-color: transparent;
+    font-size: 22px;
+    color: var(--color);
+    letter-spacing: 3px;
+    transition: all 0.5s linear;
+    overflow: hidden;
+
+}
+
+a:hover{
+    background: var(--color);
+    color: black;
+    box-shadow: 
+        0 0 5px var(--color),
+        0 0 25px var(--color),
+        0 0 50px var(--color),
+        0 0 180px var(--color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+/* Top */
+span:nth-child(1){  
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,var(--color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: top 1s linear infinite;
+}
+
+@keyframes top{
+    0%{
+        left: -100%;
+    }
+    50%, 100%{
+        left: 100%;
+    }
+}
+
+/* left */
+span:nth-child(2){  
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--color));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: right 1s 0.25s linear infinite;
+}
+
+@keyframes right{
+    0%{
+        top: -100%;
+    }
+    50%, 100%{
+        top: 100%;
+    }
+}
+
+
+/* Bottom */
+span:nth-child(3){  
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(-90deg,transparent,var(--color));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: bottom 1s 0.50s linear infinite;
+}
+
+@keyframes bottom{
+    0%{
+        right: -100%;
+    }
+    50%, 100%{
+        right: 100%;
+    }
+}
+
+/* right */
+span:nth-child(4){  
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(-180deg,transparent,var(--color));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: left 1s 0.75s linear infinite;
+}
+
+@keyframes left{
+    0%{
+        bottom: -100%;
+    }
+    50%, 100%{
+        bottom: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
